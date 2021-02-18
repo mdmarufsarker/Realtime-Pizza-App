@@ -12,6 +12,9 @@ const PORT = process.env.PORT || 3000;
 // }
 
 
+// Assets
+app.use(express.static('public'))
+
 app.get('/', (req, res) =>{
     // Checking output on browser
     // res.render('Welcome')
