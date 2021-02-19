@@ -62,3 +62,8 @@ section.login a {
 section.login a:hover {
   color: #b23301;
 }
+
+.pizzas {
+  height: 60%;
+  width: 100%;
+}
