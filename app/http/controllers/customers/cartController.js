@@ -7,6 +7,11 @@ function cartController() {
         // mordern way
         index(req, res){
             res.render('customers/cart')
+        },
+        update(req, res){
+            // cart a pizza add korar logic
+            
+            return res.json({data: 'all ok'})
         }
     }
 }
