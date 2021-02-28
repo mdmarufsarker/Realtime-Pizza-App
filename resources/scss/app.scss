@@ -63,7 +63,6 @@ section.cart {
         color: $dark;
     }
 }
-
 .hero-images{
     .zoom-1 {
         animation: scale1  10s linear infinite;
@@ -131,7 +130,6 @@ section.cart {
         margin-left: -335px;
     }
 }
-
 section.login {
     background: $background;
     min-height: calc(100vh - 86px);
@@ -169,4 +167,50 @@ section.login {
 .noty_theme__mint{
     border-radius: 50px!important;
     padding-left: 8px!important;
+}
+
+//Copy Color
+::selection {
+  background-color: $primary;
+  color: #000;
+}
+
+//Caret Color
+
+// @keyframes rainbow {
+//   0% { caret-color: $background; }
+//   20% { caret-color: $background; }
+//   40% { caret-color: $background; }
+//   60% { caret-color: $background; }
+//   80% { caret-color: $background; }
+//   100% { caret-color: $background; }
+// }
+
+input {
+  padding:20px;
+  font-size:18px;
+  width:100%;
+  caret-color: $background;
+  margin-bottom: .5em;
+}
+
+// input:focus {
+//   animation: 3s infinite rainbow;
+// }
+
+input:focus {
+  animation: 3s infinite $background;
+}
+
+// Customer/Orders 
+a.link{
+    color: $primary;
+    &:hover{
+        color: $primary-hover;
+    }
+}
+
+.admin-orders{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }

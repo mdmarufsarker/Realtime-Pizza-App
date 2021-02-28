@@ -448,3 +448,38 @@ section.login a:hover {
   border-radius: 50px !important;
   padding-left: 8px !important;
 }
+
+::-moz-selection {
+  background-color: #FE5F1E;
+  color: #000;
+}
+
+::selection {
+  background-color: #FE5F1E;
+  color: #000;
+}
+
+input {
+  padding: 20px;
+  font-size: 18px;
+  width: 100%;
+  caret-color: #f39c12;
+  margin-bottom: 0.5em;
+}
+
+input:focus {
+  -webkit-animation: 3s infinite #f39c12;
+          animation: 3s infinite #f39c12;
+}
+
+a.link {
+  color: #FE5F1E;
+}
+a.link:hover {
+  color: #b23301;
+}
+
+.admin-orders {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
