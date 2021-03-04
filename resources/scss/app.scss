@@ -323,3 +323,236 @@ section.status {
     font-size: 14px;
     margin-top: 8px;
 }
+
+
+// responsive part
+@media(max-width:1500px){
+    .hero-images{
+        .zoom-1 {
+            animation: scale1  5s linear infinite;
+            -webkit-animation: scale1  5s linear infinite;
+        }   
+        @keyframes scale1 {
+            0% {
+              transform: scale(1.1);
+            }
+            25% {
+              transform: scale(1);
+            }
+            50% {
+              transform: scale(.9);
+            }
+            75% {
+              transform: scale(1);
+            }
+            100% {
+              transform: scale(1.1);
+            }
+        }
+        .piz-1{
+            margin-left: 0px;
+        }
+        .piz-2{
+            margin-left: -340px;
+            display: none;
+        }
+        .piz-3{
+            margin-left: -350px;
+            display: none;
+        }
+        .piz-4{
+            margin-left: -335px;
+            display: none;
+        }
+    }   
+}
+@media(max-width:1350px){
+    .container{
+        max-width: 90%;
+    }
+}
+@media(max-width:1290px){
+    section.menu{
+        .w-64{
+            width: 12rem;
+        }
+        .pizzas{
+            height:60%;
+            width: 100%;
+        }
+    }
+}
+@media(max-width:1000px){
+    section.menu{
+        .w-64{
+            width: 10rem;
+        }
+        .pizzas{
+            height:60%;
+            width: 100%;
+        }
+    }
+    section.login{
+        margin-bottom: 5rem;
+    }
+}
+@media(max-width:850px){
+    section.menu{
+        .grid-cols-4 {
+            grid-template-columns: repeat(2,minmax(0,1fr));
+            display: flex;
+            .w-64{
+                width: 18rem;
+                margin: auto;
+            }
+        }
+        .row-gap-16 {
+            grid-row-gap: 4rem;
+            row-gap: 4rem;
+        }
+        .col-gap-12 {
+            grid-column-gap: 3rem;
+            column-gap: 3rem;
+        }
+        .grid {
+            display: grid;
+        }
+    }
+}
+// customer orders
+@media(max-width:768px){
+    table{
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    .status-box ul li span::before{
+        font-size: 34px;
+    }
+}
+@media(max-width:750px){
+    section.cart{
+        .w-1\/2 {
+            width: 80%;
+        }        
+    }
+    section.hero{
+        .w-1\/2 {
+            width: 50%;
+            .text-6xl {
+                font-size: 3rem;
+            }
+        }
+    }
+}
+@media(max-width:700px){
+    section.menu{
+        .grid-cols-4 {
+            grid-template-columns: repeat(2,minmax(0,1fr));
+            display: flex;
+            .w-64{
+                width: 14rem;
+                margin: auto;
+            }
+        }
+        .row-gap-16 {
+            grid-row-gap: 4rem;
+            row-gap: 4rem;
+        }
+        .col-gap-12 {
+            grid-column-gap: 3rem;
+            column-gap: 3rem;
+        }
+        .grid {
+            display: grid;
+        }
+    }
+}
+@media(max-width:555px){
+    section.hero{
+        .w-1\/2 .text-6xl{
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+    }
+    section.menu{
+        .grid-cols-4 {
+            grid-template-columns: repeat(2,minmax(0,1fr));
+            display: flex;
+            .w-64{
+                width: 10rem;
+                margin: auto;
+            }
+        }
+        .row-gap-16 {
+            grid-row-gap: 4rem;
+            row-gap: 4rem;
+        }
+        .col-gap-12 {
+            grid-column-gap: 3rem;
+            column-gap: 3rem;
+        }
+        .grid {
+            display: grid;
+        }
+    }
+    nav{
+        .pl-12{
+            padding-left: 1rem;
+        }
+        .pr-12 {
+            padding-right: 1rem;
+            ul li{
+                margin-left: .5rem;
+            }
+        }
+    }
+}
+@media(max-width:500px){
+    section.cart{
+        .pizza-list{
+            .w-24{
+                width: 4rem;
+            }
+        }
+    }
+    nav{
+        .pl-12{
+            img{
+                max-width: 75%;
+            }
+        }
+    }
+}
+@media(max-width:420px){
+    section.menu{
+        .grid-cols-4 {
+            grid-template-columns: repeat(1,minmax(0,1fr));
+            display: flex;
+            .w-64{
+                width: 18rem;
+                margin: auto;
+            }
+        }
+        .row-gap-16 {
+            grid-row-gap: 4rem;
+            row-gap: 4rem;
+        }
+        .col-gap-12 {
+            grid-column-gap: 3rem;
+            column-gap: 3rem;
+        }
+        .grid {
+            display: grid;
+        }
+    }
+    section.cart{
+        .order{
+            width: 100%;
+            padding: 5px 10px;
+            .pizza-list .w-24{
+                width: 3rem;
+            }
+        }
+    }
+}
