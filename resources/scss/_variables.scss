@@ -10,6 +10,9 @@ $background: #f39c12;
 $navbar: #e67e22;
 $completed-status: #5352ed;
 
+$anims: float, floatReverse,float2, floatReverse2;
+$easeSmooth: cubic-bezier(0.39,0.575,0.28,0.995);
+
 // Transition
 
 $smooth: all .2s ease-in-out;

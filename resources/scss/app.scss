@@ -556,3 +556,139 @@ section.status {
         }
     }
 }
+
+
+// 404 page
+
+.container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 85vh;
+    margin: 0 auto;
+	background: $background;
+	color: black;
+	font-family: arial, sans-serif;
+	overflow: hidden;
+    box-sizing: border-box;
+    font-size: 30px;
+}
+
+.content {
+	position: relative;
+	width: 600px;
+	max-width: 100%;
+	margin: 20px;
+	background: $navbar;
+    color: $pure;
+	padding: 60px 40px;
+	text-align: center;
+	box-shadow: -10px 10px 67px -12px rgba(0,0,0,0.2);
+	opacity: 0; 
+	animation: apparition 0.8s 1.2s $easeSmooth forwards;
+	
+	p {
+		font-size: 1.5rem;
+		margin-top: 0;
+		margin-bottom: 0.6rem;
+		letter-spacing: 0.1rem;
+		color: $pure;
+		
+		&:last-child{margin-bottom: 0;}
+	}
+	
+	a {
+		display: inline-block;
+		margin-top: 2rem;
+		padding: 0.5rem 1.5rem;
+		border: 3px solid $pure;
+        color: $pure;
+		font-size: 1.5rem;
+		text-decoration: none;
+		cursor: pointer;
+		font-weight: bold;
+        border-radius: 30px;
+        &:focus{
+            outline: none;
+        }
+	}
+}
+
+.particle {
+	position: absolute;
+	display: block;
+	pointer-events: none;
+	
+	@for $i from 1 through 80 {
+		&:nth-child(#{$i}){
+			$size: random(20) + 10;
+			$blur: $i * 0.02;
+			$speed: random(20)+20; 
+			$delay: random(10)*0.1;
+			$anim: nth($anims, random(length($anims)));
+			
+			top: random(100) / (100 + $size/8) * 100%;
+			left: random(100) / (100 + $size/10) * 100%;
+			font-size: $size + px;
+			filter: blur( (#{$blur}) + px);
+			animation: $speed+s  $anim infinite;
+		}
+	}
+}
+
+@keyframes apparition {
+	from {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+	
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes float {
+  0%,100% {
+    transform: translateY(0);
+	}
+  50% {
+    transform: translateY(180px);
+	}
+}
+
+@keyframes floatReverse {
+  0%,100% {
+    transform: translateY(0);
+	}
+  50% {
+    transform: translateY(-180px);
+  }
+}
+	
+@keyframes float2 {
+  0%,100% {
+    transform: translateY(0);
+	}
+  50% {
+    transform: translateY(28px);
+	}
+}
+
+@keyframes floatReverse2 {
+  0%,100% {
+    transform: translateY(0);
+	}
+  50% {
+    transform: translateY(-28px);
+	}
+}
+
+@mixin animation ($delay, $duration, $animation) {
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-name: $animation;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
